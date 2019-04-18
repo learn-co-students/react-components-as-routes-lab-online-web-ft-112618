@@ -9,12 +9,17 @@ import Actors from '../components/Actors';
 import Directors from '../components/Directors';
 import Movies from '../components/Movies';
 
-
 const App = (props) => {
   return (
-    <Router>
-      {/*{code here}*/}
-    </Router>
+     <Router>
+       <React.Fragment>
+          <NavBar />
+          <Route path="/" render={ Home }/>
+          <Route path="/movies" render={ Movies }/>
+          <Route path="/directors" render={ Directors }/>
+          <Route path="/actors" render={ Actor }/>
+       </React.Fragment>
+     </Router>
   );
 };
 
